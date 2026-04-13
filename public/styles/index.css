@@ -1,0 +1,42 @@
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 3px solid black;
+    padding: 20px;
+    background: white;
+    width: 250px;
+    box-shadow: 6px 6px 0 black;
+}
+
+/* BUTTON BASE */
+button.btn {
+    padding: 8px 16px;
+    background: #f4c430; /* yellow brutal */
+    border: 3px solid black;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 black;
+    margin-top: 8px;
+}
+
+/* HOVER EFFECT */
+button.btn:hover {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+
+/* DELETE BUTTON */
+button.btn.delete {
+    background: #ff4d4d;
+    color: white;
+}
+
+/* ALIGN BUTTONS */
+.card form {
+    display: inline-block;
+    margin-right: 10px;
+}

@@ -1,0 +1,30 @@
+.hero {
+    max-width: 900px;
+    margin-top: 60px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 12px 24px;
+    background: #f4c430;
+    border: 3px solid black;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    box-shadow: 5px 5px 0 black;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}

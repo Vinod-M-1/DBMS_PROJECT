@@ -1,0 +1,14 @@
+<% layout('layouts/boilerplate') %>
+<% style = '<link rel="stylesheet" href="/styles/add.css">' %>
+
+<h1>Add Artist</h1>
+
+<form action="/artists" method="POST">
+    <input name="name" placeholder="Name" required>
+    <textarea name="biography" placeholder="bio" ></textarea>
+    <input name="style" placeholder="Style">
+    <input name="email" placeholder="email" required>
+    <input name="password" type="password" placeholder="password" required>
+
+    <button>Add Artist</button>
+</form>

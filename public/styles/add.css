@@ -1,0 +1,18 @@
+form {
+    max-width: 400px;
+}
+
+input, textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 3px solid black;
+}
+
+button {
+    padding: 10px;
+    border: 3px solid black;
+    background: yellow;
+    font-weight: bold;
+    box-shadow: 4px 4px 0 black;
+}

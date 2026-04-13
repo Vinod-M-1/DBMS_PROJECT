@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: 'Arial';
+    background: #eae6df;   /* light brutal bg like your ref */
+    color: #111;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border: 3px solid black;
+    background: white;
+    box-shadow: 6px 6px 0 black;
+    margin: 20px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* PAGE WRAPPER */
+.page {
+    padding: 20px 40px;
+}

@@ -1,0 +1,33 @@
+<% layout('layouts/boilerplate') %>
+<% style = '<link rel="stylesheet" href="/styles/index.css">' %>
+
+<h1>Currently <%= countinfo %> artists</h1>
+
+
+<div class="cards">
+    <% artistsinfo.forEach(artist => { %>
+
+        <div class="card">
+            <h3><%= artist.name %></h3>
+
+            <p><b>Style:</b> <%= artist.style || 'N/A' %></p>
+
+            <p>
+                <%= artist.biography 
+                    ? artist.biography.substring(0, 60) + '...' 
+                    : 'N/A' %>
+            </p>
+
+            <p><b>Email:</b> <%= artist.email %></p>
+
+            <!-- <div class="actions">
+                <a href="/artists/<%= artist.artist_id %>" class="btn">View</a>
+                <a href="/edit/<%= artist.artist_id %>" class="btn">Edit</a>
+                <a href="/delete/<%= artist.artist_id %>" class="btn delete">Delete</a>
+            </div> -->
+            <form action="/edit/<%= artist.artist_id %>" method="GET"><button class="btn">Edit</button></form>
+            <form action="/delete/<%= artist.artist_id %>?_method=DELETE" method="POST"><button class="btn delete">Delete</button></form>
+        </div>
+
+    <% }) %>
+</div>
