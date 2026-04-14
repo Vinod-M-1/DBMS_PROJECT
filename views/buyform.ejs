@@ -1,0 +1,25 @@
+<% layout('layouts/boilerplate') %>
+<% style = '<link rel="stylesheet" href="/styles/addart.css">' %>
+
+<h1>Buy Artwork</h1>
+
+<div class="card">
+    <h3><%= art.title %></h3>
+    <p>Price: ₹<%= art.price %></p>
+    <p>Category: <%= art.category %></p>
+</div>
+
+<form action="/buy/<%= art.artwork_id %>" method="POST" class="form">
+
+    <label>Name</label>
+    <input type="text" name="name" required>
+
+    <label>Email / Contact</label>
+    <input type="text" name="contact_info" required>
+
+    <label>Interest</label>
+    <input type="text" name="interest" value="<%= art.title %>">
+
+    <button class="btn add">Confirm Purchase</button>
+
+</form>

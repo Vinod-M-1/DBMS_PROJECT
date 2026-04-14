@@ -2,15 +2,45 @@
 
 <% style = '<link rel="stylesheet" href="/styles/main.css">' %>
 
-<div class="hero">
+<section class="hero">
 
-    <h1>I DESIGN FOR GROWTH.</h1>
+    <div class="hero-left">
+        <h1>I DESIGN FOR GROWTH.</h1>
 
-    <p>
-        A platform where artists register, showcase artwork,
-        and manage exhibitions.
-    </p>
+        <p>
+            A platform where artists register, showcase artwork,
+            and manage exhibitions.
+        </p>
 
-    <a href="/artists" class="btn">Explore Artists</a>
+        <div class="hero-actions">
+            <a href="/artists" class="btn">Explore Artists</a>
+            <a href="/exhibitions" class="btn secondary">View Galleries</a>
+        </div>
+    </div>
 
-</div>
+    <div class="hero-right">
+        <img src="/images/hero.jpg" alt="Art">
+    </div>
+
+</section>
+
+<section class="info-section">
+    <div class="info-card">
+        <div class="info-content">
+            <h2>Art Gallery Management</h2>
+            <p>
+                Our specialized relational system centralizes high-value operations. 
+                Using a <strong>3-NF normalized architecture</strong>, we integrate artist biographies, 
+                artwork specifications, and sales transactions into a single source of truth.
+            </p>
+            <ul class="features">
+                <li>✦ Artist Profiles Management</li>
+                <li>✦ Artwork Cataloging System</li>
+                <li>✦ Sales Transaction Management</li>
+            </ul>
+        </div>
+        <div class="info-image">
+            <img src="/images/description_ui.jpg" alt="System Description">
+        </div>
+    </div>
+</section>

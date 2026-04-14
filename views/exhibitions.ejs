@@ -1,0 +1,86 @@
+<!-- <% layout('layouts/boilerplate') %>
+<% style = '<link rel="stylesheet" href="/styles/exhibitions.css">' %>
+
+<h1>Exhibitions</h1>
+
+<a href="/exhibitions/add" class="btn add">+ Add Exhibition</a>
+
+<div class="cards">
+
+<% exhibitions.forEach(ex => { %>
+
+    <div class="card">
+        <h3><%= ex.name %></h3>
+
+        <p><b>Location:</b> <%= ex.location %></p>
+        <p><b>Date:</b> <%= ex.date.toISOString().split('T')[0] %></p>
+
+        <p><b>Artworks:</b></p>
+
+        <% if (ex.artworks.length > 0) { %>
+            <ul class="art-list">
+                <% ex.artworks.forEach(a => { %>
+                    <li class="art-item">
+                        <span><%= a.title %></span>
+
+                        <form action="/exhibitions/remove/<%= ex.exhibition_id %>/<%= a.id %>?_method=DELETE" method="POST">
+                            <button class="btn delete small">Remove</button>
+                        </form>
+                    </li>
+                <% }) %>
+            </ul>
+        <% } else { %>
+            <p>No artworks assigned</p>
+        <% } %>
+
+    <a href="/exhibitions/<%= ex.exhibition_id %>/assign" class="btn" style="margin-top:10px;">
+        Assign Artwork
+    </a>
+<% }) %>
+
+</div> -->
+
+<% layout('layouts/boilerplate') %>
+<% style = '<link rel="stylesheet" href="/styles/exhibitions.css">' %>
+
+<h1>Exhibitions</h1>
+
+<a href="/exhibitions/add" class="btn add">+ Add Exhibition</a>
+
+<div class="cards">
+
+<% exhibitions.forEach(ex => { %>
+
+    <div class="card">
+        <h3><%= ex.name %></h3>
+
+        <p><b>Location:</b> <%= ex.location %></p>
+        <p><b>Date:</b> <%= ex.date ? ex.date.toISOString().split('T')[0] : 'N/A' %></p>
+
+        <p><b>Artworks:</b></p>
+
+        <% if (ex.artworks.length > 0) { %>
+            <ul class="art-list">
+                <% ex.artworks.forEach(a => { %>
+                    <li class="art-item">
+                        <span><%= a.title %></span>
+
+                        <form action="/exhibitions/remove/<%= ex.exhibition_id %>/<%= a.id %>?_method=DELETE" method="POST">
+                            <button class="btn delete small">Remove</button>
+                        </form>
+                    </li>
+                <% }) %>
+            </ul>
+        <% } else { %>
+            <p>No artworks assigned</p>
+        <% } %>
+
+        <a href="/exhibitions/<%= ex.exhibition_id %>/assign" class="btn assign">
+            Assign Artwork
+        </a>
+
+    </div>
+
+<% }) %>
+
+</div>

@@ -1,0 +1,94 @@
+/* FILTERS */
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filters select {
+    padding: 6px;
+    border: 3px solid black;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    width: 260px;
+    padding: 15px;
+    border: 3px solid black;
+    background: white;
+    box-shadow: 6px 6px 0 black;
+}
+
+/* IMAGE */
+.card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.no-img {
+    height: 150px;
+    background: #ddd;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* STATUS */
+.available {
+    background: #28c76f;
+    border: 2px solid black;
+    padding: 3px 6px;
+}
+
+.sold {
+    background: red;
+    color: white;
+    border: 2px solid black;
+    padding: 3px 6px;
+}
+
+/* BUTTONS (reuse brutal style) */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 3px solid black;
+    font-weight: bold;
+    background: #f4c430;
+    box-shadow: 4px 4px 0 black;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+
+.btn.add {
+    background: #28c76f;
+}
+
+.btn.delete {
+    background: #ff4d4d;
+    color: white;
+}
+
+.card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;   /* 🔥 prevents overflow */
+    border: 2px solid black;
+    display: block;
+}

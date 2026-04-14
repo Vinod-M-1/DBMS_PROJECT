@@ -1,0 +1,47 @@
+/* CONTAINER */
+.assign-container {
+    margin-top: 30px;
+}
+
+/* FORM */
+.assign-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+    padding: 20px;
+    border: 3px solid black;
+    background: white;
+    box-shadow: 6px 6px 0 black;
+}
+
+/* LABEL */
+.assign-form label {
+    font-weight: bold;
+}
+
+/* SELECT */
+.assign-form select {
+    padding: 8px;
+    border: 3px solid black;
+    font-weight: bold;
+}
+
+/* BUTTON */
+.btn {
+    padding: 8px 14px;
+    border: 3px solid black;
+    background: #f4c430;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 black;
+}
+
+.btn:hover {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+
+.btn.add {
+    background: #28c76f;
+}

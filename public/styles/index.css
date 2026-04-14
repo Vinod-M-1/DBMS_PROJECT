@@ -40,3 +40,10 @@ button.btn.delete {
     display: inline-block;
     margin-right: 10px;
 }
+
+
+/* GREEN BUTTON */
+button.btn.view {
+    background: #28c76f; /* green */
+    color: black;
+}

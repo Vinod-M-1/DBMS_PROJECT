@@ -1,0 +1,66 @@
+<% layout('layouts/boilerplate') %>
+<% style = '<link rel="stylesheet" href="/styles/buy.css">' %>
+
+<h1>Buy Artworks</h1>
+
+<!-- FILTERS -->
+<form method="GET" action="/buy" class="filters">
+    <select name="category">
+        <option value="">All Categories</option>
+        <option value="Painting">Painting</option>
+        <option value="Abstract">Abstract</option>
+        <option value="Digital">Digital</option>
+    </select>
+
+    <select name="status">
+        <option value="">All</option>
+        <option value="available">Available</option>
+        <option value="sold">Sold</option>
+    </select>
+
+    <select name="sort">
+        <option value="">Sort</option>
+        <option value="low">Price Low → High</option>
+        <option value="high">Price High → Low</option>
+    </select>
+
+    <button class="btn">Apply</button>
+</form>
+
+<!-- CARDS -->
+<div class="cards">
+
+<% result.forEach(art => { %>
+
+    <div class="card">
+
+        <% if (art.image_link) { %>
+            <img src="<%= art.image_link %>" class="card-img">
+        <% } else { %>
+            <div class="no-img">No Image</div>
+        <% } %>
+
+        <h3><%= art.title %></h3>
+
+        <p>₹<%= art.price %></p>
+        <p><%= art.category %></p>
+
+        <p>
+            <% if (art.status === 'sold') { %>
+                <span class="sold">SOLD</span>
+            <% } else { %>
+                <span class="available">AVAILABLE</span>
+            <% } %>
+        </p>
+
+        <% if (art.status === 'available') { %>
+            <a href="/buy/<%= art.artwork_id %>" class="btn add">Buy</a>
+        <% } else { %>
+            <button class="btn delete" disabled>Sold</button>
+        <% } %>
+
+    </div>
+
+<% }) %>
+
+</div>

@@ -1,0 +1,25 @@
+<% layout('layouts/boilerplate') %>
+<% style = '<link rel="stylesheet" href="/styles/addart.css">' %>
+
+<h1>Add Artwork</h1>
+
+<form action="/artists/<%= artist_id %>/artworks" method="POST" class="form">
+
+    <!-- hidden artist id -->
+    <input type="hidden" name="artist_id" value="<%= artist_id %>">
+
+    <label>Title</label>
+    <input type="text" name="title" required>
+
+    <label>Price</label>
+    <input type="number" name="price" required>
+
+    <label>Category</label>
+    <input type="text" name="category">
+
+    <label>Image Link (filename)</label>
+    <input type="text" name="image_link">
+
+    <button class="btn add">Add Artwork</button>
+
+</form>

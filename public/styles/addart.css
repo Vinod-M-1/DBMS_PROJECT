@@ -1,0 +1,36 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.form label {
+    font-weight: bold;
+}
+
+.form input {
+    padding: 8px;
+    border: 3px solid black;
+    outline: none;
+}
+
+/* reuse brutal buttons */
+.btn {
+    padding: 8px 16px;
+    background: #f4c430;
+    border: 3px solid black;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 black;
+}
+
+.btn:hover {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+
+.btn.add {
+    background: #28c76f;
+}

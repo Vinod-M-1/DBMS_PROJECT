@@ -1,0 +1,22 @@
+<% layout('layouts/boilerplate') %>
+<% style = '<link rel="stylesheet" href="/styles/addart.css">' %>
+
+<h1>Edit Artwork</h1>
+
+<form action="/artworks/<%= art.artwork_id %>?_method=PUT" method="POST" class="form">
+
+    <label>Title</label>
+    <input type="text" name="title" value="<%= art.title %>" required>
+
+    <label>Price</label>
+    <input type="number" name="price" value="<%= art.price %>" required>
+
+    <label>Category</label>
+    <input type="text" name="category" value="<%= art.category %>">
+
+    <label>Image Link</label>
+    <input type="text" name="image_link" value="<%= art.image_link %>">
+
+    <button class="btn">Update</button>
+
+</form>

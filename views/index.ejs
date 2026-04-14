@@ -27,6 +27,9 @@
             </div> -->
             <form action="/edit/<%= artist.artist_id %>" method="GET"><button class="btn">Edit</button></form>
             <form action="/delete/<%= artist.artist_id %>?_method=DELETE" method="POST"><button class="btn delete">Delete</button></form>
+            <form action="/artists/<%= artist.artist_id %>/artworks" method="GET">
+                <button class="btn view">Artworks</button>
+            </form>
         </div>
 
     <% }) %>

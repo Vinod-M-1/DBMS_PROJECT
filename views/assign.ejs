@@ -1,0 +1,26 @@
+<% layout('layouts/boilerplate') %>
+<% style = '<link rel="stylesheet" href="/styles/assign.css">' %>
+
+<h1>Assign Artwork</h1>
+
+<div class="assign-container">
+
+    <form action="/exhibitions/<%= exhibition_id %>/assign" method="POST" class="assign-form">
+
+        <label>Select Artwork</label>
+
+        <select name="artwork_id">
+            <% artworks.forEach(a => { %>
+                <option value="<%= a.artwork_id %>">
+                    <%= a.title %>
+                </option>
+            <% }) %>
+        </select>
+
+        <button class="btn add">Assign</button>
+
+    </form>
+    <% if (artworks.length === 0) { %>
+    <p>No artworks available to assign</p>
+<% } %>
+</div>

@@ -1,0 +1,48 @@
+<% layout('layouts/boilerplate') %>
+<% style = '<link rel="stylesheet" href="/styles/artworks.css">' %>
+
+<h1>Artworks</h1>
+
+<a href="/artists/<%= artist_id %>/addartwork" class="btn add">+ Add Artwork</a>
+
+<div class="cards">
+    <% result.forEach(art => { %>
+
+        <div class="card">
+
+            <!-- IMAGE -->
+            <% if (art.image_link) { %>
+                <img src="<%= art.image_link %>" class="card-img">
+            <% } else { %>
+                <div class="no-img">No Image</div>
+            <% } %>
+
+            <h3><%= art.title %></h3>
+
+            <p><b>Price:</b> ₹<%= art.price %></p>
+            <p><b>Category:</b> <%= art.category %></p>
+
+            <p>
+                <b>Status:</b> 
+                <% if (art.status === 'sold') { %>
+                    <span class="sold">SOLD</span>
+                <% } else { %>
+                    <span class="available">AVAILABLE</span>
+                <% } %>
+            </p>
+
+            <!-- ACTIONS -->
+            <% if (art.status !== 'sold') { %>
+            <form action="/artworks/edit/<%= art.artwork_id %>" method="GET">
+                <button class="btn">Edit</button>
+            </form>
+
+            <form action="/artworks/<%= art.artwork_id %>?_method=DELETE" method="POST">
+                <button class="btn delete">Delete</button>
+            </form>
+            <% } %>
+
+        </div>
+
+    <% }) %>
+</div>
